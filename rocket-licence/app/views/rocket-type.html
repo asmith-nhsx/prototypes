@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/rocket-type-answer" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "rocket-type",
+          name: "rocket-type",
+          fieldset: {
+            legend: {
+              text: "What class of rocket are you intending to launch?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+                value: "Falcon Heavy",
+                text: "Falcon Heavy",
+                checked: checked("rocket-type", "Falcon Heavy")
+            },
+            {
+                value: "Skylark",
+                text: "Skylark",
+                checked: checked("rocket-type", "Skylark")
+            },
+            {
+                value: "Bottle Rocket",
+                text: "Bottle Rocket",
+                checked: checked("rocket-type", "Bottle Rocket")
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
