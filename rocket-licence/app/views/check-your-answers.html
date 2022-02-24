@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/rocket-details">Back</a>
+  <a class="govuk-back-link" href="/launch-country">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -42,6 +42,20 @@
             <a href="/rocket-details">
               Change
               <span class="govuk-visually-hidden"> rocket details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Launch country
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['launch-country'].split(':')[1] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/launch-country">
+              Change
+              <span class="govuk-visually-hidden"> launch country</span>
             </a>
           </dd>
         </div>

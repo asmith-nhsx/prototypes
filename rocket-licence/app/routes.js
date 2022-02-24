@@ -18,7 +18,7 @@ router.post('/rocket-type-answer', function (req, res) {
     res.redirect('/rocket-details')
   } else {
     // Send user to enter more details
-    res.redirect('/launch-date')
+    res.redirect('/launch-country')
   }
 
 })
