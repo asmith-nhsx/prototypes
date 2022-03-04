@@ -9,9 +9,12 @@ $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 
   let selectElement = document.querySelector('#launch-country')
+  let selectedCountry = document.querySelector('#launch-country-selected').value
+
+  selectElement.value = selectedCountry
 
   accessibleAutocomplete.enhanceSelectElement({
-    defaultValue: '',
+    defaultValue: "",
     source: (query, populateResults) => {
       const options = selectElement.querySelectorAll('option')
       let results = []
