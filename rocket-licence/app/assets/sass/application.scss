@@ -9,11 +9,6 @@ $govuk-assets-path: '/govuk/assets/';
 @import ".tmp/sass/extensions";
 
 // Patterns that aren't in Frontend
-@import "patterns/contents-list";
-@import "patterns/mainstream-guide";
-@import "patterns/pagination";
-@import "patterns/related-items";
-@import "patterns/task-list";
 
 .autocomplete__wrapper * {
   @include govuk-typography-common();
