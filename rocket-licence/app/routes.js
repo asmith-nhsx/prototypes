@@ -23,4 +23,3 @@ router.post('/rocket-type-answer', function (req, res) {
 
 })
 
-module.exports = router
